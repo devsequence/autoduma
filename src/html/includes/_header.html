@@ -1,0 +1,107 @@
+<header class="header wrapper" id="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-nav">
+                <ul>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Оплата і доставка</a></li>
+                    <li><a href="#">Наші вакансії</a></li>
+                    <li><a href="#">Клієнтам</a></li>
+                    <li><a href="#">Партнерам</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </div>
+            <div class="header-location dropdown">
+                <span class="header-location__title dropdown-title">Хмельницький</span>
+                <ul class="header-location__list dropdown-list">
+                    <li><a href="#">Хмельницький 1</a></li>
+                    <li><a href="#">Хмельницький 2</a></li>
+                    <li><a href="#">Хмельницький 3</a></li>
+                </ul>
+            </div>
+            <div class="header-lang">
+                <ul class="header-lang__list">
+                    <li><a href="#" class="current">UA</a></li>
+                    <li><a href="#">RU</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="header-center">
+        <div class="container">
+            <div class="header-logo">
+                <a href="#"><img src="../static/images/logo.svg" alt="logo"></a>
+            </div>
+            <div class="header-phone">
+                <span class="header-phone__title">(096) 28-52-444</span>
+                <ul class="header-phone__list">
+                    <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
+                    <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
+                    <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
+                </ul>
+            </div>
+            <div class="header-time">
+                Пн-Пт: 9:00-18:00, Сб: 9:00-15:00, Нд: Вих
+            </div>
+            <div class="header-info">
+                <a href="#" class="header-info__login">
+                    <svg class="icon">
+                        <use xlink:href="#ic-user"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header-info__account">
+                    <img src="../static/images/user.png" alt="user">
+                    <b>Стожко Илья</b>
+                    <span>Z035114</span>
+                </a>
+            </div>
+            <div class="header-user">
+                <div class="header-user__item">
+                    <a href="#" class="btn-popup header-user__add" data-popup="user_wish">
+                        <svg class="icon">
+                            <use xlink:href="#ic-heart"></use>
+                        </svg>
+                        <span class="header-user__counter count_wish">0</span>
+                    </a>
+                </div>
+                <div class="header-user__item">
+                    <a href="#" class="btn-popup header-user__basket" data-popup="user_basket">
+                        <svg class="icon">
+                            <use xlink:href="#ic-shopping-cart"></use>
+                        </svg>
+                        <span class="header-user__counter basket_counter">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-bottom">
+        <div class="container">
+            <div class="header-logo">
+                <a href="#"><img src="../static/images/logo-white.svg" alt="logo"></a>
+            </div>
+            <div class="header-buttons">
+                <a href="#" class="btn-primary">Підбір фахівцем</a>
+                <a href="#" class="btn-primary">Виберіть авто</a>
+                <a href="#" class="btn-primary btn-catalog">каталог</a>
+            </div>
+            @@include('_catalog.html')
+            <div class="header-search">
+                <form action="#">
+                    <label for="search-header" class="search-label">
+                        <input type="search" id="search-header" class="search-input" placeholder="Пошук по номеру або VIN коду">
+                    </label>
+                    <button type="submit" class="search-btn"></button>
+                </form>
+            </div>
+            <div class="header-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,126 @@
+.about-container{
+  padding-bottom: 60px;
+}
+.about-tabs{
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  .tabs-nav__inner{
+    width: 270px;
+  }
+  .tabs-nav, .about-nav{
+    border-bottom: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: sticky;
+    top: 100px;
+    li{
+      background: transparent;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    a{
+      padding: 0;
+      color: $gray;
+      background: transparent;
+      &:after{
+        display: none;
+      }
+      &.active{
+        background: transparent;
+        color: $default;
+      }
+    }
+  }
+  .tabs-container{
+    width: calc(100% - 300px);
+    padding-left: 30px;
+    border-left: 1px solid $light;
+  }
+  .page-wrap__title{
+    margin-top: 0;
+  }
+  .about-title{
+    font-size: 22px;
+    font-weight: 500;
+    color: $default;
+  }
+  .about-wrap{
+    display: flex;
+    margin: 0 -15px 30px;
+  }
+  .about-item{
+    width: calc(25% - 30px);
+    margin: 0 15px 30px;
+    &__media{
+      width: 150px;
+      margin: 0 auto;
+      height: 150px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &__title{
+      font-weight: 500;
+      font-size: 14px;
+      color: $default;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      text-align: center  ;
+    }
+    &__text{
+      font-size: 14px;
+      line-height: 18px;
+      color: $default;
+    }
+  }
+}
+.about-tabs{
+  .wysiwyg{
+    table{
+      border: 0;
+      border-spacing: 0;
+      td{
+        border: 0;
+        border-spacing: 0;
+        padding: 0 15px;
+      }
+      img{
+        max-width: 150px;
+        max-height: 150px;
+      }
+    }
+  }
+}
+.about-nav{
+  top: 200px;
+}
+@media screen and (max-width: 1200px) {
+  .about-tabs{
+    .wysiwyg{
+      table{
+        tr{
+          display: flex;
+          flex-wrap: wrap;
+        }
+        td{
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .about-tabs{
+    .wysiwyg{
+      table{
+        td{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

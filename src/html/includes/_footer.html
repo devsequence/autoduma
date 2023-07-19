@@ -1,0 +1,413 @@
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="footer-wrap">
+            <div class="footer-logo">
+                <a href="#"><img src="../static/images/logo-white.svg" alt="logo"></a>
+                <div class="footer-logo__item">
+                    <div class="footer-logo__title">Наші нагороди:</div>
+                    <div class="footer-logo__image"><img src="../static/images/certificate.png" alt="certificate"></div>
+                </div>
+                <div class="footer-logo__item">
+                    <div class="footer-logo__title">Ми приймаємо:</div>
+                    <div class="footer-logo__image">
+                        <img src="../static/images/mastercard.png" alt="mastercard">
+                        <img src="../static/images/visa.png" alt="visa">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-category">
+                <ul>
+                    <li><a href="#">Автоаксесуари</a></li>
+                    <li><a href="#">Запчастини</a></li>
+                    <li><a href="#">Автосвітло</a></li>
+                    <li><a href="#">Інструменти</a></li>
+                    <li><a href="#">Автоскло</a></li>
+                    <li><a href="#">Масла і автохімія</a></li>
+                    <li><a href="#">Автосувеніри</a></li>
+                    <li><a href="#">Турбіни</a></li>
+                    <li><a href="#">Аккумулятори</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Оплата і доставка</a></li>
+                    <li><a href="#">Наші вакансії</a></li>
+                    <li><a href="#">Клієнтам</a></li>
+                    <li><a href="#">Партнерам</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <div class="footer-title">Контакти:</div>
+                <div class="footer-location">Київ, пр-т Голосіївський, 130/57, Україна, 03127</div>
+                <div class="footer-phone">
+                    <a href="tel:+380445854535">+38 (044) 585-45-35</a>
+                    <a href="tel:+380950074535">+38 (095) 007-45-35</a>
+                    <a href="tel:+380670074535">+38 (067) 007-45-35</a>
+                </div>
+                <div class="footer-email">
+                    <a href="mailto:info@svitrartsua">info@svitrartsua</a>
+                </div>
+                <div class="footer-time">Пн-Пт: 9:00-18:00, Сб: 9:00-15:00, Нд: Вих</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">© SVITPARTS 2023. Всі права захищені.</div>
+            <div class="footer-button">
+                <a href="#" class="btn-secondary">Подарунковий сертифікат</a>
+                <a href="#" class="btn-secondary">повідомити про помилку</a>
+            </div>
+            <div class="footer-social">
+                <span>Підписатися на новини</span>
+                <a href="#" target="_blank"><img src="../static/images/facebook.svg" alt="social"></a>
+            </div>
+            <div class="footer-social">
+                <span>Відкрита лінія:</span>
+                <a href="#" target="_blank"><img src="../static/images/skype.svg" alt="social"></a>
+                <a href="#" target="_blank"><img src="../static/images/phone.svg" alt="social"></a>
+                <a href="#" target="_blank"><img src="../static/images/telegram.svg" alt="social"></a>
+                <a href="#" target="_blank"><img src="../static/images/messenger.svg" alt="social"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="call-me">
+    <button class="btn-call btn-popup" data-popup="callMe">
+        <svg class="icon">
+            <use xlink:href="#ic-call-me"></use>
+        </svg>
+        <span>
+            Передзвоніть мені
+        </span>
+    </button>
+</div>
+
+<div class="popup popup-available" data-popup="available">
+    <div class="popup-centered">
+        <div class="popup-close">
+            <svg class="icon">
+                <use xlink:href="#ic-close"></use>
+            </svg>
+        </div>
+        <div class="popup-subtitle">
+            Повідомити про старт продажів
+        </div>
+        <form>
+            <label class="label">
+                <input type="email" id="available-email" class="input" name="available[email]" placeholder="E-mail" required>
+            </label>
+            <button class="btn btn-green" type="submit">
+                Повідомити
+            </button>
+        </form>
+    </div>
+    <div class="popup-overlay"></div>
+</div>
+<div class="popup popup-oneClick" data-popup="oneClick">
+    <div class="popup-centered">
+        <div class="popup-close">
+            <svg class="icon">
+                <use xlink:href="#ic-close"></use>
+            </svg>
+        </div>
+        <div class="popup-subtitle">
+            Залиште номер телефона. Ми Вам передзвонимо для оформлення замовлення
+        </div>
+        <form>
+            <label class="label">
+                <input type="tel" id="one-click" class="input" name="oneClick[phone]" placeholder="Телефон" required>
+            </label>
+            <button class="btn btn-green" type="submit">
+                Повідомити
+            </button>
+        </form>
+    </div>
+    <div class="popup-overlay"></div>
+</div>
+<div class="popup popup-basket" data-popup="basket">
+    <div class="popup-centered">
+        <div class="popup-close">
+            <svg class="icon">
+                <use xlink:href="#ic-close"></use>
+            </svg>
+        </div>
+        <div class="popup-title">
+            Кошик
+        </div>
+        <div class="order-list">
+            <table class="order-table">
+                <thead class="order-table__head">
+                <tr>
+                    <th class="order-photo">Фото</th>
+                    <th class="order-name">Название товара</th>
+                    <th class="order-quantity">Количество</th>
+                    <th class="order-price">Цена</th>
+                    <th class="order-sum">Всего</th>
+                </tr>
+                </thead>
+                <tbody class="order-table__body">
+                <tr class="order-table__item">
+                    <td class="order-photo">
+                        <button type="button" class="item-del">
+                            <svg class="icon">
+                                <use xlink:href="#ic-close-radius"></use>
+                            </svg>
+                        </button>
+                        <a href="#">
+                            <img src="../static/images/product-small-1.jpg" alt="product">
+                        </a>
+                    </td>
+                    <td class="order-name">
+                        <a href="#">
+                            <p>Акумуляторна шліфмашина кутова Dnipro-M DGA-200BC ULTRA (без АКБ и ЗП)</p>
+                        </a>
+                    </td>
+                    <td class="order-quantity" data-label="Количество">
+                        <div class="product-quantity">
+                            <button class="btn-counter btn-plus" type="button"></button>
+                            <input class="input-counter basket-quantity" type="number" style="-moz-appearance: textfield"  style="-moz-appearance: textfield" name="product[qty]" value="11" maxlength="3">
+                            <button class="btn-counter btn-minus" type="button"></button>
+                        </div>
+                    </td>
+                    <td class="order-price" data-label="Цена">
+                        <p class="order-price__old"><s>8420 грн</s></p>
+                        <p class="order-price__current">132 750 грн</p>
+                    </td>
+                    <td class="order-sum" data-label="Всего">
+                        <p>132 750 грн</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="order-total">
+            <div class="order-total__summ">
+                <p class="order-total__text">Всего:</p>
+                <p class="order-total__count">969  грн</p>
+            </div>
+        </div>
+        <div class="order-action">
+            <a class="btn link-line" href="catalog.html">Продолжить покупки</a>
+            <a class="btn btn-green" href="order.html">Заказать</a>
+        </div>
+    </div>
+    <div class="popup-overlay"></div>
+</div>
+<div class="popup popup-login" data-popup="login">
+    <div class="popup-centered">
+        <div class="popup-close">
+            <svg class="icon">
+                <use xlink:href="#ic-close"></use>
+            </svg>
+        </div>
+
+        <div class="popup-title">
+            Вхід
+        </div>
+        <form>
+            <label class="label">
+                <input type="tel" id="login" class="input" name="login[phone/email]" placeholder="Телефон або e-mail" required>
+            </label>
+            <label class="label">
+                <input type="password" id="login-password" class="input" name="login[password]" placeholder="Пароль" required>
+            </label>
+            <div class="modal-group">
+                <input type="checkbox" id="remember" class="input-checkbox">
+                <label for="remember" class="label-checkbox">
+                    Запам'ятати мене
+                </label>
+            </div>
+            <a href="#" class="forgot btn-popup" data-popup="forgot">
+                Забули пароль
+            </a>
+            <p class="popup-text">
+                Або авторизуйтесь через соціальні мережі
+            </p>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../static/images/facebook.png" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../static/images/google.png" alt="google">
+                    </a>
+                </li>
+            </ul>
+            <div class="action-btn">
+                <button class="btn btn-green" type="submit">
+                    Увійти
+                </button>
+                <button class="btn btn-popup" data-popup="regist" type="button">
+                    Реєстрація
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="popup-overlay"></div>
+</div>
+<div class="popup popup-regist" data-popup="regist">
+    <div class="popup-centered">
+        <div class="popup-close">
+            <svg class="icon">
+                <use xlink:href="#ic-close"></use>
+            </svg>
+        </div>
+        <div class="popup-title">
+            <span>
+                Реєстрація
+            </span>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../static/images/facebook.png" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../static/images/google.png" alt="google">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <form>
+            <label class="label">
+                <input type="tel" class="input" name="regist[phone]" placeholder="Телефон" required>
+            </label>
+            <label class="label">
+                <input type="text" class="input" name="regist[name]" placeholder="Ім'я" required>
+            </label>
+            <label class="label">
+                <input type="password" class="input" name="regist[password]" placeholder="Пароль" required>
+            </label>
+            <label class="label">
+                <input type="password" class="input" name="regist[submitPassword]" placeholder="Підтвердження пароля" required>
+            </label>
+            <label class="label">
+                <input type="email" class="input" name="regist[email]" placeholder="E-mail" required>
+            </label>
+            <div class="modal-group">
+                <input type="checkbox" id="agry-popup" class="input-checkbox">
+                <label for="agry-popup" class="label-checkbox">
+                    Реєструючись, ви погоджуєтесь з
+                    <a href="#" class="green-line">
+                        угодою користувача
+                    </a>
+                </label>
+            </div>
+            <button class="btn btn-green" type="submit">
+                Увійти
+            </button>
+            <div class="login-btn">
+                <span>
+                    Вже є аккаунт?
+                </span>
+                <a href="#" class="green-line btn-popup" data-popup="login">
+                    Вхід
+                </a>
+            </div>
+        </form>
+    </div>
+    <div class="popup-overlay"></div>
+</div>
+<div class="popup popup-forgot" data-popup="forgot">
+    <div class="popup-centered">
+        <div class="popup-close">
+            <svg class="icon">
+                <use xlink:href="#ic-close"></use>
+            </svg>
+        </div>
+        <div class="popup-title">
+            Забыли пароль?
+        </div>
+        <form>
+            <label class="label">
+                <input type="email" id="forgot" class="input" name="forgot[email]" placeholder="E-mail" required>
+            </label>
+            <button class="btn btn-green" type="submit">
+                Відновити
+            </button>
+            <ul>
+                <li>
+                    <button class="btn btn-green btn-popup" data-popup="login" type="button">Вхід</button>
+                </li>
+                <li>
+                    <button class="btn link-line btn-popup" data-popup="regist" type="button">Реєстрація</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="popup-overlay"></div>
+</div>
+<div class="popup popup-callMe" data-popup="callMe">
+    <div class="popup-centered">
+        <div class="popup-close">
+            <svg class="icon">
+                <use xlink:href="#ic-close"></use>
+            </svg>
+        </div>
+        <div class="popup-subtitle">
+            Передзвоніть мені
+        </div>
+        <form>
+            <label class="label">
+                <input type="tel" id="call-me" class="input" name="callMe[phone]" placeholder="Телефон" required>
+            </label>
+            <button class="btn btn-green" type="submit">
+                Надіслати
+            </button>
+        </form>
+    </div>
+    <div class="popup-overlay"></div>
+</div>
+<div class="popup popup-search" data-popup="popupSearch">
+    <div class="popup-centered">
+        <div class="popup-close">
+            <svg class="icon">
+                <use xlink:href="#ic-close"></use>
+            </svg>
+        </div>
+        <div class="popup-title">
+            пошук товарів
+        </div>
+        <form>
+            <form class="search-form" action="#" method="get">
+                <div class="search-form__wrap">
+                    <label class="label">
+                        <input type="text" class="search-input input" id="searchInputMobile" placeholder="Поиск" title="Поиск" autocomplete="off">
+                    </label>
+                    <button type="submit" class="search-submit">
+                        <svg class="icon">
+                            <use xlink:href="#ic-search"></use>
+                        </svg>
+                    </button>
+                    <button type="reset" class="search-reset">
+                        <svg class="icon">
+                            <use xlink:href="#ic-close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </form>
+    </div>
+    <div class="popup-overlay"></div>
+</div>
+<div class="popup cookies-popup">
+    <div class="popup-centered">
+        <div class="cookies-wrap container">
+            <div class="cookies-wrap__text">
+                Our website uses cookies to improve your browsing experience. By using our website you agree to our use of cookies.
+                <a href="#">
+                    More about Cookies
+                </a>
+            </div>
+            <div class="modal-group">
+                <input class="input-checkbox" id="cookiesAgree" type="checkbox" name="cookies"/>
+                <label class="label-checkbox btn btn-green" for="cookiesAgree">Agree</label>
+            </div>
+        </div>
+    </div>
+</div>
