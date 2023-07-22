@@ -11,13 +11,16 @@
                     <li><a href="#">Контакти</a></li>
                 </ul>
             </div>
-            <div class="header-location dropdown">
-                <span class="header-location__title dropdown-title">Хмельницький</span>
-                <ul class="header-location__list dropdown-list">
-                    <li><a href="#">Хмельницький 1</a></li>
-                    <li><a href="#">Хмельницький 2</a></li>
-                    <li><a href="#">Хмельницький 3</a></li>
-                </ul>
+            <div class="header-location">
+                <select name="location">
+                    <option>Вінниця</option>
+                    <option>Івано-Франківськ</option>
+                    <option>Київ</option>
+                    <option>Одеса</option>
+                    <option>Харків</option>
+                    <option>Миколаїв</option>
+                    <option>Черкаси</option>
+                </select>
             </div>
             <div class="header-lang">
                 <ul class="header-lang__list">
@@ -34,9 +37,9 @@
             <div class="header-logo">
                 <a href="#"><img src="../static/images/logo.svg" alt="logo"></a>
             </div>
-            <div class="header-phone">
-                <span class="header-phone__title">(096) 28-52-444</span>
-                <ul class="header-phone__list">
+            <div class="header-phone dropdown">
+                <span class="header-phone__title dropdown-title">(096) 28-52-444</span>
+                <ul class="header-phone__list dropdown-list">
                     <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
                     <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
                     <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
@@ -56,6 +59,23 @@
                     <b>Стожко Илья</b>
                     <span>Z035114</span>
                 </a>
+                <div class="dropdown-menu">
+                    <div class="header-info__account-price">
+                        Ваша заборгованість:
+                        <p>0 <span> ₴</span></p>
+                    </div>
+                    <ul class="header-info__account-list">
+                        <li>
+                            <a href="/user">Кабінет користувача</a>
+                        </li>
+                        <li>
+                            <a href="/user/update">Налаштування профілю</a>
+                        </li>
+                        <li>
+                            <a href="/logout">Вийти</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="header-user">
                 <div class="header-user__item">
@@ -63,7 +83,7 @@
                         <svg class="icon">
                             <use xlink:href="#ic-heart"></use>
                         </svg>
-                        <span class="header-user__counter count_wish">0</span>
+                        <span class="header-user__counter count_wish">10</span>
                     </a>
                 </div>
                 <div class="header-user__item">
@@ -80,9 +100,6 @@
 
     <div class="header-bottom">
         <div class="container">
-            <div class="header-logo">
-                <a href="#"><img src="../static/images/logo-white.svg" alt="logo"></a>
-            </div>
             <div class="header-buttons">
                 <a href="#" class="btn-primary">Підбір фахівцем</a>
                 <a href="#" class="btn-primary">Виберіть авто</a>
@@ -96,12 +113,53 @@
                     </label>
                     <button type="submit" class="search-btn"></button>
                 </form>
+<!--                add class active to block search-history for a show block-->
+                <div class="search-history">
+                    <div class="search-history__title">
+                        <span>Історія пошуку</span>
+                        <div class="search-history__reset">Очистити</div>
+                    </div>
+                    <ul>
+                        <li><a href="#">Acura</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Автомобільні окуляри для денної їзди VAG Volkswagen GTI</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Запчастини на Ауді</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Мерседес</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Фільтр паливний</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Мастило</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Автомобільні аксесуари</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Автомобільні окуляри для денної їзди VAG Volkswagen GTI</a><span class="item-history__reset"></span></li>
+                    </ul>
+                </div>
             </div>
             <div class="header-btn">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+        </div>
+    </div>
+    <div class="header-overlay"></div>
+    <div class="header-mobile">
+        <div class="header-nav">
+            <ul>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Оплата і доставка</a></li>
+                <li><a href="#">Наші вакансії</a></li>
+                <li><a href="#">Клієнтам</a></li>
+                <li><a href="#">Партнерам</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </div>
+        <div class="header-phone dropdown">
+            <span class="header-phone__title dropdown-title">(096) 28-52-444</span>
+            <ul class="header-phone__list dropdown-list">
+                <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
+                <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
+                <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
+            </ul>
+        </div>
+        <div class="header-time">
+            Пн-Пт: 9:00-18:00, Сб: 9:00-15:00, Нд: Вих
         </div>
     </div>
 </header>

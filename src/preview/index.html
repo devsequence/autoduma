@@ -42,13 +42,16 @@
                     <li><a href="#">Контакти</a></li>
                 </ul>
             </div>
-            <div class="header-location dropdown">
-                <span class="header-location__title dropdown-title">Хмельницький</span>
-                <ul class="header-location__list dropdown-list">
-                    <li><a href="#">Хмельницький 1</a></li>
-                    <li><a href="#">Хмельницький 2</a></li>
-                    <li><a href="#">Хмельницький 3</a></li>
-                </ul>
+            <div class="header-location">
+                <select name="location">
+                    <option>Вінниця</option>
+                    <option>Івано-Франківськ</option>
+                    <option>Київ</option>
+                    <option>Одеса</option>
+                    <option>Харків</option>
+                    <option>Миколаїв</option>
+                    <option>Черкаси</option>
+                </select>
             </div>
             <div class="header-lang">
                 <ul class="header-lang__list">
@@ -65,9 +68,9 @@
             <div class="header-logo">
                 <a href="#"><img src="../static/images/logo.svg" alt="logo"></a>
             </div>
-            <div class="header-phone">
-                <span class="header-phone__title">(096) 28-52-444</span>
-                <ul class="header-phone__list">
+            <div class="header-phone dropdown">
+                <span class="header-phone__title dropdown-title">(096) 28-52-444</span>
+                <ul class="header-phone__list dropdown-list">
                     <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
                     <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
                     <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
@@ -87,6 +90,23 @@
                     <b>Стожко Илья</b>
                     <span>Z035114</span>
                 </a>
+                <div class="dropdown-menu">
+                    <div class="header-info__account-price">
+                        Ваша заборгованість:
+                        <p>0 <span> ₴</span></p>
+                    </div>
+                    <ul class="header-info__account-list">
+                        <li>
+                            <a href="/user">Кабінет користувача</a>
+                        </li>
+                        <li>
+                            <a href="/user/update">Налаштування профілю</a>
+                        </li>
+                        <li>
+                            <a href="/logout">Вийти</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="header-user">
                 <div class="header-user__item">
@@ -94,7 +114,7 @@
                         <svg class="icon">
                             <use xlink:href="#ic-heart"></use>
                         </svg>
-                        <span class="header-user__counter count_wish">0</span>
+                        <span class="header-user__counter count_wish">10</span>
                     </a>
                 </div>
                 <div class="header-user__item">
@@ -111,15 +131,12 @@
 
     <div class="header-bottom">
         <div class="container">
-            <div class="header-logo">
-                <a href="#"><img src="../static/images/logo-white.svg" alt="logo"></a>
-            </div>
             <div class="header-buttons">
                 <a href="#" class="btn-primary">Підбір фахівцем</a>
                 <a href="#" class="btn-primary">Виберіть авто</a>
                 <a href="#" class="btn-primary btn-catalog">каталог</a>
             </div>
-            <div class="menu-cat-dropdown flex-nowrap hidden d-none d-flex">
+            <div class="menu-cat-dropdown flex-nowrap">
     <div class="menu-cat__navigation">
         <div class="menu-cat__navigation_head d-flex justify-content-between align-items-center px-2 py-2">
             <span class="menu-cat__navigation_head_title">Каталог товаров</span>
@@ -137,7 +154,7 @@
     </div>
     <div class="menu-cat__grid menu-cat__grid_main px-lg-2">
         <ul class="menu-cat__parent">
-            <li class="menu-cat__link menu-cat__link_hovered" data-cat-id="menu-cat-sub-47">
+            <li class="menu-cat__link" data-cat-id="menu-cat-sub-47">
                 <a id="menu-cat-item-47" href="/catalog/accessories">Автоаксессуары</a>
                 <i class="bi bi-chevron-right"></i></li>
             <li class="menu-cat__link" data-cat-id="menu-cat-sub-713">
@@ -190,12 +207,6 @@
                     <a href="/catalog/accessories/avtoprinadlezhnosti">Автопринадлежности</a>
                     <i class="bi bi-plus"></i>
                 </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1853" aria-expanded="false"
-                     aria-controls="collapseExample">
-                    <a href="/catalog/accessories/avtoprinadlezhnosti">Автопринадлежности</a>
-                    <i class="bi bi-plus"></i>
-                </div>
                 <ul class="menu-cat__sub__sub_items d-none d-lg-block mt-lg-2 mb-lg-3 pl-lg-1">
                     <li>
                         <a href="/catalog/accessories/avtoprinadlezhnosti/usb-zaryadki-v-avto">USB зарядки в
@@ -232,51 +243,9 @@
                             шторки</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1853" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/accessories/avtoprinadlezhnosti/usb-zaryadki-v-avto">–&ensp;USB
-                            зарядки в авто</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/avtoprinadlezhnosti/batareyki">–&ensp;Батарейки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/avtoprinadlezhnosti/veshalki-v-avto">–&ensp;Вешалки в
-                            авто</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/avtoprinadlezhnosti/derzhatel-telefona-v-avto">–&ensp;Держатель
-                            телефона в авто</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/avtoprinadlezhnosti/dopolnitelnyye-zerkala-zadnego-vida">–&ensp;Дополнительные
-                            зеркала заднего вида</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/avtoprinadlezhnosti/kovriki-dlya-telefona">–&ensp;Коврики
-                            для телефона</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/avtoprinadlezhnosti/parkovochnyye-karty">–&ensp;Парковочные
-                            карты</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/avtoprinadlezhnosti/prikurivateli">–&ensp;Прикуриватели</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/avtoprinadlezhnosti/solntsezashchitnyye-shtorki">–&ensp;Солнцезащитные
-                            шторки</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/accessories/bezopasnost-v-avto">Безопасность в авто</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-853" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/accessories/bezopasnost-v-avto">Безопасность в авто</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -313,48 +282,9 @@
                         <a href="/catalog/accessories/bezopasnost-v-avto/ognetushiteli">Огнетушители</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-853" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/accessories/bezopasnost-v-avto/aksessuary-dlya-avtokresel">–&ensp;Аксессуары
-                            для автокресел</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/bezopasnost-v-avto/aptechki-avtomobilnyye">–&ensp;Аптечки
-                            автомобильные</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/bezopasnost-v-avto/detskiye-avtokresla">–&ensp;Детские
-                            автокресла</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/bezopasnost-v-avto/dorozhnyye-konusy">–&ensp;Дорожные
-                            конусы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/bezopasnost-v-avto/zhilety-svetootrazhayushchiye">–&ensp;Жилеты
-                            светоотражающие</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/bezopasnost-v-avto/znaki-avariynoy-ostanovki">–&ensp;Знаки
-                            аварийной остановки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/bezopasnost-v-avto/nabory-avtomobilista">–&ensp;Наборы
-                            автомобилиста</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/bezopasnost-v-avto/ognetushiteli">–&ensp;Огнетушители</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/accessories/aksessuary-dlya-avto">Для авто</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1823" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/accessories/aksessuary-dlya-avto">Для авто</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -376,33 +306,9 @@
                             сидений</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1823" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/accessories/aksessuary-dlya-avto/avtomobilnyye-tenty">–&ensp;Автомобильные
-                            тенты</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/aksessuary-dlya-avto/chekhly-dlya-avto">–&ensp;Чехлы
-                            для авто</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/aksessuary-dlya-avto/aksessuary-chekhly-dlya-koles">–&ensp;Чехлы
-                            для колес</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/aksessuary-dlya-avto/chekhly-dlya-sideniy">–&ensp;Чехлы
-                            для сидений</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/accessories/tekhpomoshch">Техпомощь</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-873" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/accessories/tekhpomoshch">Техпомощь</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -465,76 +371,9 @@
                         <a href="/catalog/accessories/tekhpomoshch/fonariki">Фонарики</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-873" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/domkraty">–&ensp;Домкраты</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/zaryadnyye-puskozaryadnyye-ustroystva">–&ensp;Зарядные
-                            и пускозарядные устройства</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/kanistry">–&ensp;Канистры</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/klemmy-akkumulyatora">–&ensp;Клеммы
-                            аккумулятора</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/kompressory_avtomobilnye">–&ensp;Компрессоры
-                            автомобильные</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/leyki">–&ensp;Лейки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/lopaty">–&ensp;Лопаты</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/manometry">–&ensp;Манометры</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/nasosy-avtomobilnyye">–&ensp;Насосы
-                            автомобильные</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/perchatki">–&ensp;Перчатки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/predokhraniteli">–&ensp;Предохранители</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/provoda-prikurivaniya">–&ensp;Провода
-                            прикуривания</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/trosy-buksirovochnyye">–&ensp;Тросы
-                            буксировочные</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/tsepi-na-kolosa">–&ensp;Цепи на
-                            колёса</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/lebedki">–&ensp;Лебедки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/skrebki-i-shchetki">–&ensp;Скребки и
-                            щетки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tekhpomoshch/fonariki">–&ensp;Фонарики</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/accessories/transportirovka">Транспортировка</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-163" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/accessories/transportirovka">Транспортировка</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -570,48 +409,9 @@
                         <a href="/catalog/accessories/transportirovka/farkopy">Фаркопы</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-163" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/accessories/transportirovka/accessories-for-transportation">–&ensp;Аксессуары
-                            для транспортировки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/transportirovka/boxes-and-baskets">–&ensp;Боксы и
-                            корзины</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/transportirovka/kreplenie_dlya_velosipeda_na_avto">–&ensp;Крепление
-                            для велосипеда на авто</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/transportirovka/organayzery-avtomobilnyye">–&ensp;Органайзеры
-                            автомобильные</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/transportirovka/transportation-of-bicycles">–&ensp;Перевозка
-                            велосипедов</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/transportirovka/transportation-of-sports-equipment">–&ensp;Перевозка
-                            спортивного оборудования</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/transportirovka/razdelitelnyye-setki-bagazhnika">–&ensp;Разделительные
-                            сетки багажника</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/transportirovka/farkopy">–&ensp;Фаркопы</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/accessories/tyuning">Тюнинг</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1973" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/accessories/tyuning">Тюнинг</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -661,57 +461,6 @@
                         <a href="/catalog/accessories/tyuning/emblemy-na-kapot">Эмблемы на капот</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1973" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/accessories/tyuning/bryzgoviki">–&ensp;Брызговики</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/deflektory-okon">–&ensp;Дефлекторы окон</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/zashchitnyye-i-dekorativnyye-plenki">–&ensp;Защитные
-                            и декоративные пленки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/zashchity-dvigatelya">–&ensp;Защиты
-                            двигателя</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/kovriki">–&ensp;Коврики</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/kolpaki-na-kolesa">–&ensp;Колпаки на
-                            колеса</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/nakladki-na-pedali">–&ensp;Накладки на
-                            педали</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/nakladki-na-porogi">–&ensp;Накладки на
-                            пороги</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/nakleyki-na-avto">–&ensp;Наклейки на авто</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/nasadka-na-glushitel">–&ensp;Насадка на
-                            глушитель</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/podkrylki">–&ensp;Подкрылки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/ramki-nomernogo-znaka">–&ensp;Рамки номерного
-                            знака</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/spoylera-na-avto">–&ensp;Спойлера на авто</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/accessories/tyuning/emblemy-na-kapot">–&ensp;Эмблемы на капот</a>
-                    </li>
-                </ul>
             </div>
         </div>
         <div id="menu-cat-sub-713" class="menu-cat__sub d-md-none">
@@ -719,22 +468,11 @@
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
                     <a href="/catalog/avtosvet/avtolampy">Автолампы</a>
                 </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-723" aria-expanded="false"
-                     aria-controls="collapseExample">
-                    <a href="/catalog/avtosvet/avtolampy">Автолампы</a>
-                </div>
             </div>
         </div>
         <div id="menu-cat-sub-51" class="menu-cat__sub d-md-none">
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/auto-gifts/brendovaya-odezhda">Брендовая одежда</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1103" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/auto-gifts/brendovaya-odezhda">Брендовая одежда</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -770,47 +508,9 @@
                             платки</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1103" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovaya-odezhda/beysbolki-kepki">–&ensp;Бейсболки,
-                            кепки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovaya-odezhda/galstuki">–&ensp;Галстуки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovaya-odezhda/zaponki">–&ensp;Запонки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovaya-odezhda/obuv">–&ensp;Обувь</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovaya-odezhda/odezhda">–&ensp;Одежда</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovaya-odezhda/remni">–&ensp;Ремни</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovaya-odezhda/ryukzaki">–&ensp;Рюкзаки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovaya-odezhda/sumki-chemodany-keysy">–&ensp;Сумки,
-                            чемоданы, кейсы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovaya-odezhda/shapki-sharfy-platki">–&ensp;Шапки,
-                            шарфы и платки</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/auto-gifts/brendovyye-aksessuary">Брендовые аксессуары</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1203" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/auto-gifts/brendovyye-aksessuary">Брендовые аксессуары</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -860,62 +560,9 @@
                         <a href="/catalog/auto-gifts/brendovyye-aksessuary/shnurki-lenty">Шнурки, ленты</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1203" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/braslety">–&ensp;Браслеты</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/breloki">–&ensp;Брелоки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/vizitnitsy-kreditnitsy">–&ensp;Визитницы,
-                            кредитницы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/zazhigalki">–&ensp;Зажигалки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/zazhimy-dlya-banknot">–&ensp;Зажимы
-                            для банкнот</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/znachki-bulavki-nashivki-nakleyki">–&ensp;Значки,
-                            булавки, нашивки, наклейки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/zonty">–&ensp;Зонты</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/klyuchnytsy">–&ensp;Ключницы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/koshelki-portmone">–&ensp;Кошельки,
-                            портмоне</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/oblozhki-dlya-dokumentov">–&ensp;Обложки
-                            для документов</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/ochki">–&ensp;Очки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/chasy">–&ensp;Часы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/brendovyye-aksessuary/shnurki-lenty">–&ensp;Шнурки,
-                            ленты</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/auto-gifts/detyam">Детям</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1343" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/auto-gifts/detyam">Детям</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -933,31 +580,9 @@
                         <a href="/catalog/auto-gifts/detyam/myagkiye-igrushki">Мягкие игрушки</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1343" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/auto-gifts/detyam/detskiye-avtomobili">–&ensp;Детские
-                            автомобили</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/detyam/igrushki-igry">–&ensp;Игрушки, игры</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/detyam/modeli-avtomobiley">–&ensp;Модели
-                            автомобилей</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/detyam/myagkiye-igrushki">–&ensp;Мягкие игрушки</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/auto-gifts/dlya-avto">Для авто</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1393" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/auto-gifts/dlya-avto">Для авто</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -975,31 +600,9 @@
                         <a href="/catalog/auto-gifts/dlya-avto/chekhly-dlya-koles">Чехлы для колес</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1393" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/auto-gifts/dlya-avto/aromatizatory">–&ensp;Ароматизаторы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/dlya-avto/kolpachki-nippeley">–&ensp;Колпачки
-                            ниппелей</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/dlya-avto/kolpachki-stupits">–&ensp;Колпачки ступиц</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/dlya-avto/chekhly-dlya-koles">–&ensp;Чехлы для
-                            колес</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/auto-gifts/dom-uyut">Дом и уют</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1443" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/auto-gifts/dom-uyut">Дом и уют</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -1017,29 +620,9 @@
                         <a href="/catalog/auto-gifts/dom-uyut/polotentsa-pledy">Полотенца, пледы</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1443" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/auto-gifts/dom-uyut/kresla-stulya">–&ensp;Кресла, стулья</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/dom-uyut/kruzhki-chashki">–&ensp;Кружки и чашки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/dom-uyut/podushki">–&ensp;Подушки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/dom-uyut/polotentsa-pledy">–&ensp;Полотенца, пледы</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/auto-gifts/kantselyariya">Канцелярия </a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1493" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/auto-gifts/kantselyariya">Канцелярия </a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -1055,29 +638,9 @@
                         <a href="/catalog/auto-gifts/kantselyariya/ruchki-karandashi">Ручки и карандаши</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1493" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/auto-gifts/kantselyariya/bloknoty-zapisnyye-knizhki">–&ensp;Блокноты,
-                            зап.книжки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/kantselyariya/kalendari-printy">–&ensp;Календари,
-                            принты</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/kantselyariya/ruchki-karandashi">–&ensp;Ручки и
-                            карандаши</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/auto-gifts/krasota">Красота</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1533" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/auto-gifts/krasota">Красота</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -1090,25 +653,9 @@
                             косметика</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1533" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/auto-gifts/krasota/manikyurnyye-nabory">–&ensp;Маникюрные
-                            наборы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/krasota/parfyumeriya-kosmetika">–&ensp;Парфюмерия,
-                            косметика</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/auto-gifts/otdykh-turizm">Отдых и туризм</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1563" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/auto-gifts/otdykh-turizm">Отдых и туризм</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -1148,53 +695,9 @@
                         <a href="/catalog/auto-gifts/otdykh-turizm/flyagi-butyli">Фляги, бутыли</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1563" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/auto-gifts/otdykh-turizm/velosipedy">–&ensp;Велосипеды</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/otdykh-turizm/nabory-dlya-piknika">–&ensp;Наборы для
-                            пикника</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/otdykh-turizm/nozhi">–&ensp;Ножи</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/otdykh-turizm/otkryvalki-shtopory">–&ensp;Открывалки и
-                            штопоры</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/otdykh-turizm/palatki">–&ensp;Палатки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/otdykh-turizm/sanki-snegokaty">–&ensp;Санки и
-                            снегокаты</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/otdykh-turizm/spalnyye-meshki">–&ensp;Спальные
-                            мешки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/otdykh-turizm/termokruzhki-termosy">–&ensp;Термокружки
-                            и термосы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/otdykh-turizm/tovary-dlya-velosipedistov">–&ensp;Товары
-                            для велосипедистов</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/otdykh-turizm/flyagi-butyli">–&ensp;Фляги, бутыли</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/auto-gifts/sport">Спорт</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1673" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/auto-gifts/sport">Спорт</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -1209,26 +712,9 @@
                         <a href="/catalog/auto-gifts/sport/myachi">Мячи</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1673" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/auto-gifts/sport/golf">–&ensp;Гольф (сумки и прочее)</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/sport/lyzhi">–&ensp;Лыжи</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/sport/myachi">–&ensp;Мячи</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/auto-gifts/elektronika">Электроника</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-1713" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/auto-gifts/elektronika">Электроника</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -1254,30 +740,6 @@
                             планшетов</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-1713" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/auto-gifts/elektronika/kovriki-dlya-myshi">–&ensp;Коврики для
-                            мыши</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/elektronika/kompyuternyye-myshi">–&ensp;Компьютерные
-                            мыши</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/elektronika/naushniki">–&ensp;Наушники</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/elektronika/fleshky">–&ensp;Флешки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/elektronika/chekhly-dlya-mobilnogo-telefonov">–&ensp;Чехлы
-                            для моб.телефонов</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/auto-gifts/elektronika/chekhly-dlya-planshetov">–&ensp;Чехлы для
-                            планшетов</a>
-                    </li>
-                </ul>
             </div>
         </div>
         <div id="menu-cat-sub-2153" class="menu-cat__sub d-md-none">
@@ -1285,32 +747,11 @@
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
                     <a href="/catalog/zapchasti/hitachi">Запчасти HITACHI</a>
                 </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-2163" aria-expanded="false"
-                     aria-controls="collapseExample">
-                    <a href="/catalog/zapchasti/hitachi">Запчасти HITACHI</a>
-                </div>
-            </div>
-            <div class="menu-cat__sub-item mb-lg-1">
-                <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/zapchasti/sassone">Запчасти SASSONE</a>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-2173" aria-expanded="false"
-                     aria-controls="collapseExample">
-                    <a href="/catalog/zapchasti/sassone">Запчасти SASSONE</a>
-                </div>
             </div>
         </div>
         <div id="menu-cat-sub-513" class="menu-cat__sub d-md-none">
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/instrumenty-i-tovary-dlya-garazha/aksessuary-dlya-moek-vysokogo-davleniya">Аксессуары
-                        для моек высокого давления</a>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-733" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/instrumenty-i-tovary-dlya-garazha/aksessuary-dlya-moek-vysokogo-davleniya">Аксессуары
                         для моек высокого давления</a>
                 </div>
@@ -1408,97 +849,9 @@
                             для инструментов</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-2213" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/bity">–&ensp;Биты</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/bokorezy">–&ensp;Бокорезы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/boltorezy">–&ensp;Болторезы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/vorotki">–&ensp;Воротки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/kleshchi">–&ensp;Клещи</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/klyuchi-avtomobilnyye">–&ensp;Ключи
-                            автомобильные</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/kruglogubtsy">–&ensp;Круглогубцы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/molotki">–&ensp;Молотки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/multituly">–&ensp;Мультитулы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/nabory-instrumentov">–&ensp;Наборы
-                            инструментов</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/napilniki">–&ensp;Напильники</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/nozhi-montazhnyye">–&ensp;Ножи
-                            монтажные</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/nozhnitsy-po-metallu">–&ensp;Ножницы
-                            по металлу</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/otvertki">–&ensp;Отвертки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/ochki-zashchitnyye">–&ensp;Очки
-                            защитные</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/passatizhi">–&ensp;Пассатижи</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/ploskogubtsy">–&ensp;Плоскогубцы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/ruletki">–&ensp;Рулетки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/syemniki-izolyatsii">–&ensp;Съемники
-                            изоляции</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/tolshchinomery">–&ensp;Толщиномеры</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/tortsevyye-golovki">–&ensp;Торцевые
-                            головки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/treshotki">–&ensp;Трещотки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/shtangentsirkuli">–&ensp;Штангенциркули</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/instrumenty-i-tovary-dlya-garazha/instrumenty/yashchik-dlya-instrumentov">–&ensp;Ящики
-                            для инструментов</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/instrumenty-i-tovary-dlya-garazha/moyki-vysokogo-davleniya">Мойки
-                        высокого давления</a>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-523" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/instrumenty-i-tovary-dlya-garazha/moyki-vysokogo-davleniya">Мойки
                         высокого давления</a>
                 </div>
@@ -1507,29 +860,14 @@
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
                     <a href="/catalog/instrumenty-i-tovary-dlya-garazha/nasosy">Насосы</a>
                 </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-543" aria-expanded="false"
-                     aria-controls="collapseExample">
-                    <a href="/catalog/instrumenty-i-tovary-dlya-garazha/nasosy">Насосы</a>
-                </div>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
                     <a href="/catalog/instrumenty-i-tovary-dlya-garazha/pylesosy">Пылесосы</a>
                 </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-533" aria-expanded="false"
-                     aria-controls="collapseExample">
-                    <a href="/catalog/instrumenty-i-tovary-dlya-garazha/pylesosy">Пылесосы</a>
-                </div>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/instrumenty-i-tovary-dlya-garazha/elektroveniki">Электровеники</a>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-553" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/instrumenty-i-tovary-dlya-garazha/elektroveniki">Электровеники</a>
                 </div>
             </div>
@@ -1537,12 +875,6 @@
         <div id="menu-cat-sub-1" class="menu-cat__sub  d-md-none">
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/oil/avtokosmetika">Автокосметика</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-743" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/oil/avtokosmetika">Автокосметика</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -1581,51 +913,9 @@
                         <a href="/catalog/oil/avtokosmetika/cherniteli-shin">Чернители шин</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-743" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/oil/avtokosmetika/avtoshampuni">–&ensp;Автошампуни</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokosmetika/gubki-mochalki">–&ensp;Губки и мочалки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokosmetika/ochistiteli-salona">–&ensp;Очистители салона</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokosmetika/ochistitel-diskov">–&ensp;Очиститель дисков</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokosmetika/poliroli-dlya-salona">–&ensp;Полироли для
-                            салона</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokosmetika/polirol-dlya-kuzova-avto">–&ensp;Полироль для
-                            кузова авто</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokosmetika/restavracionnye-karandashi">–&ensp;Реставрационные
-                            карандаши</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokosmetika/salfetki-tryapki">–&ensp;Салфетки и тряпки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokosmetika/sredstva-dlya-ochistki-kuzova-avto">–&ensp;Средства
-                            для очистки кузова авто</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokosmetika/cherniteli-shin">–&ensp;Чернители шин</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/oil/avtokhimiya">Автохимия</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-563" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/oil/avtokhimiya">Автохимия</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -1671,67 +961,14 @@
                         <a href="/catalog/oil/avtokhimiya/razmorazhivateli">Размораживатели</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-563" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/antigeli">–&ensp;Антигели</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/antidozhd">–&ensp;Антидождь</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/antituman">–&ensp;Антитуман</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/germetiki">–&ensp;Герметики</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/klei">–&ensp;Клеи</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/ochistiteli-dvigatelya-naruzhnyye">–&ensp;Очистители
-                            двигателя наружные</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/ochistiteli-karbyuratora">–&ensp;Очистители
-                            карбюратора</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/ochistiteli-konditsionera">–&ensp;Очистители
-                            кондиционера</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/ochistiteli-ruk">–&ensp;Очистители рук</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/ochistiteli-tormoznoy-sistemy">–&ensp;Очистители
-                            тормозной системы</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/promyvki">–&ensp;Промывки</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/avtokhimiya/razmorazhivateli">–&ensp;Размораживатели</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
                     <a href="/catalog/oil/antiseptics">Антисептики</a>
                 </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-453" aria-expanded="false"
-                     aria-controls="collapseExample">
-                    <a href="/catalog/oil/antiseptics">Антисептики</a>
-                </div>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/oil/hydraulic">Гидравлические масла</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-43" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/oil/hydraulic">Гидравлические масла</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -1740,19 +977,9 @@
                         <a href="/catalog/oil/hydraulic/forklift-oils">Вилочные масла</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-43" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/oil/hydraulic/forklift-oils">–&ensp;Вилочные масла</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/oil/liquids-adblue">Жидкости ADBLUE (АДБЛЮ)</a>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-493" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/oil/liquids-adblue">Жидкости ADBLUE (АДБЛЮ)</a>
                 </div>
             </div>
@@ -1760,19 +987,9 @@
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
                     <a href="/catalog/oil/washers">Жидкости для стеклоомывателей</a>
                 </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-40" aria-expanded="false"
-                     aria-controls="collapseExample">
-                    <a href="/catalog/oil/washers">Жидкости для стеклоомывателей</a>
-                </div>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/oil/paints-varnishes">Краски и лаки</a>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-38" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/oil/paints-varnishes">Краски и лаки</a>
                 </div>
             </div>
@@ -1780,20 +997,9 @@
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
                     <a href="/catalog/oil/motor">Моторные масла</a>
                 </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-39" aria-expanded="false"
-                     aria-controls="collapseExample">
-                    <a href="/catalog/oil/motor">Моторные масла</a>
-                </div>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/oil/coolant-antifreeze">Охлаждающие жидкости и антифризы</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-36" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/oil/coolant-antifreeze">Охлаждающие жидкости и антифризы</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -1802,20 +1008,9 @@
                         <a href="/catalog/oil/coolant-antifreeze/distilled-water">Вода дистиллированная</a>
                     </li>
                 </ul>
-                <ul id="menu-cat__sub__sub-36" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/oil/coolant-antifreeze/distilled-water">–&ensp;Вода
-                            дистиллированная</a>
-                    </li>
-                </ul>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/oil/prisadki">Присадки</a>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-843" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/oil/prisadki">Присадки</a>
                 </div>
             </div>
@@ -1823,30 +1018,14 @@
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
                     <a href="/catalog/oil/smazki">Смазки</a>
                 </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-903" aria-expanded="false"
-                     aria-controls="collapseExample">
-                    <a href="/catalog/oil/smazki">Смазки</a>
-                </div>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
                     <a href="/catalog/oil/brake">Тормозные жидкости</a>
                 </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-44" aria-expanded="false"
-                     aria-controls="collapseExample">
-                    <a href="/catalog/oil/brake">Тормозные жидкости</a>
-                </div>
             </div>
             <div class="menu-cat__sub-item mb-lg-1">
                 <div class="mb-1 menu-cat__sub_link d-none d-lg-block">
-                    <a href="/catalog/oil/transmission">Трансмиссионные масла</a>
-                    <i class="bi bi-plus"></i>
-                </div>
-                <div class="mb-1 menu-cat__sub_link collapsed d-lg-none" data-toggle="collapse"
-                     data-target="#menu-cat__sub__sub-42" aria-expanded="false"
-                     aria-controls="collapseExample">
                     <a href="/catalog/oil/transmission">Трансмиссионные масла</a>
                     <i class="bi bi-plus"></i>
                 </div>
@@ -1857,15 +1036,6 @@
                     </li>
                     <li>
                         <a href="/catalog/oil/transmission/gearbox-oils">Редукторные масла</a>
-                    </li>
-                </ul>
-                <ul id="menu-cat__sub__sub-42" class="menu-cat__sub__sub_items collapse d-lg-none">
-                    <li>
-                        <a href="/catalog/oil/transmission/all-wheel-drive-4-4-haldex-coupling">–&ensp;Муфта
-                            полного привода 4×4 Haldex</a>
-                    </li>
-                    <li>
-                        <a href="/catalog/oil/transmission/gearbox-oils">–&ensp;Редукторные масла</a>
                     </li>
                 </ul>
             </div>
@@ -2894,12 +2064,53 @@
                     </label>
                     <button type="submit" class="search-btn"></button>
                 </form>
+<!--                add class active to block search-history for a show block-->
+                <div class="search-history">
+                    <div class="search-history__title">
+                        <span>Історія пошуку</span>
+                        <div class="search-history__reset">Очистити</div>
+                    </div>
+                    <ul>
+                        <li><a href="#">Acura</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Автомобільні окуляри для денної їзди VAG Volkswagen GTI</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Запчастини на Ауді</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Мерседес</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Фільтр паливний</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Мастило</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Автомобільні аксесуари</a><span class="item-history__reset"></span></li>
+                        <li><a href="#">Автомобільні окуляри для денної їзди VAG Volkswagen GTI</a><span class="item-history__reset"></span></li>
+                    </ul>
+                </div>
             </div>
             <div class="header-btn">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+        </div>
+    </div>
+    <div class="header-overlay"></div>
+    <div class="header-mobile">
+        <div class="header-nav">
+            <ul>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Оплата і доставка</a></li>
+                <li><a href="#">Наші вакансії</a></li>
+                <li><a href="#">Клієнтам</a></li>
+                <li><a href="#">Партнерам</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </div>
+        <div class="header-phone dropdown">
+            <span class="header-phone__title dropdown-title">(096) 28-52-444</span>
+            <ul class="header-phone__list dropdown-list">
+                <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
+                <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
+                <li><a href="tel:0962852444" target="_blank">(096) 28-52-444</a></li>
+            </ul>
+        </div>
+        <div class="header-time">
+            Пн-Пт: 9:00-18:00, Сб: 9:00-15:00, Нд: Вих
         </div>
     </div>
 </header>
@@ -4756,18 +3967,9 @@
 </div>
 
 <script type="text/javascript" src="../static/js/jquery.min.js"></script>
-<script type="text/javascript" src="../static/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../static/js/swiper.min.js"></script>
-<script type="text/javascript" src="../static/css/fancybox.min.js"></script>
-
 <script type="text/javascript" src="../static/js/inputmask.min.js"></script>
 <script type="text/javascript" src="../static/js/select2.min.js"></script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
-
-<script type="text/javascript" src="../static/js/datepicker.min.js"></script>
-<script type="text/javascript" src="../static/js/jquery.ui.touch-punch.min.js"></script>
 
 <script  type="text/javascript" src="../static/js/common.js"></script>
 
