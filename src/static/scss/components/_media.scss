@@ -71,6 +71,11 @@
     }
   }
   .header{
+    &-logo{
+      img{
+        max-width: 160px;
+      }
+    }
     &.scroll-nav {
       .menu-cat-dropdown{
         &.active{

@@ -2134,7 +2134,7 @@ body.scroll {
 }
 .header-logo img {
   width: 100%;
-  max-width: 160px;
+  max-width: 300px;
 }
 .header-search {
   width: 100%;
@@ -5362,6 +5362,9 @@ body.scroll {
     top: 90px;
     right: auto;
     left: 0;
+  }
+  .header-logo img {
+    max-width: 160px;
   }
   .header.scroll-nav .menu-cat-dropdown.active {
     top: 90px;
