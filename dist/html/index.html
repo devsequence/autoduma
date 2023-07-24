@@ -13,11 +13,10 @@
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#000">
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<!-- build:css ../static/css/style.css -->
-<link rel="stylesheet" href="../static/css/swiper.min.css">
 <link rel="stylesheet" href="../static/css/select2.min.css">
-<!-- endbuild -->
-<link rel="stylesheet" href="../static/css/index.css">
+<link rel="stylesheet" href="../static/css/swiper.min.css">
+<link rel="stylesheet" href="../static/css/compress/index.css">
+
 <!--<link rel="shortcut icon" href="../static/images/fav.png"/>-->
 
 </head>
@@ -71,7 +70,7 @@
                     <picture>
                         <source media="(min-width: 992px)"
                                 srcset="../static/images/logo-desc.svg">
-                        <img src="../static/images/logo.svg"alt="hero profile">
+                        <img src="../static/images/logo.svg" alt="logo">
                     </picture>
                 </a>
             </div>
@@ -2274,66 +2273,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="top-filter__result hidden">
-                    <div class="top-filter__top">
-                        <div class="top-filter__top-title">Ваше авто</div>
-                        <div class="top-filter__top-list">
-                            <ul>
-                                <li>
-                                    <span class="top-filter__name">1995 Cadillac Fleetwood</span>
-                                    <span class="top-filter__desc">5.7 бензин, седан, код двигуна: LO5, 177 к.с./130kW</span>
-                                    <span class="top-filter__vin">VIN-код: JMBSRCS3A7U022814</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <button type="button" class="top-filter__top-add">Додати авто</button>
-                    </div>
-                    <div class="top-filter__bottom">
-                        <div class="top-filter__top-list">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <span class="top-filter__name">1995 Cadillac Fleetwood</span>
-                                        <span class="top-filter__desc">5.7 бензин, седан, код двигуна: LO5, 177 к.с./130kW</span>
-                                        <span class="top-filter__vin">VIN-код: JMBSRCS3A7U022814</span>
-                                    </a>
-                                    <button type="button" class="top-filter__remove"></button>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="top-filter__name">1995 AUDI TT</span>
-                                        <span class="top-filter__desc">5.7 бензин, седан, код двигуна: LO5, 177 к.с./130kW</span>
-                                        <span class="top-filter__vin">VIN-код: JMBSRCS3A7U022814</span>
-                                    </a>
-                                    <button type="button" class="top-filter__remove"></button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         <section class="wrapper top-banner__wrapper">
             <div class="container">
                 <div class="top-banner__swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="#">
+                        <div class="swiper-slide" style="background-image: url('../static/images/top-banner-bg.jpg')">
+                            <div class="top-banner__desc">
+                                <div class="top-banner__title">
+                                    Знижка <span>25%</span> на всі дитячі автокрісла
+                                </div>
+                                <div class="top-banner__date">
+                                    Акція діє з <b>25.06 по 25.07</b>
+                                </div>
+                                <a href="#" class="btn-green">Купити</a>
+                            </div>
+                            <div class="top-banner__media">
                                 <picture>
-                                    <source media="(min-width: 576px)"
-                                            srcset="../static/images/banner.jpg">
-                                    <img src="../static/images/banner-mob.jpg" alt="hero">
+                                    <!--                                    <source media="(min-width: 768)" srcset="../static/images/top-banner-505.jpg">-->
+                                    <img src="../static/images/top-banner.jpg" alt="top-banner">
                                 </picture>
-                            </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide">
-                            <a href="#">
+                        <div class="swiper-slide" style="background-image: url('../static/images/top-banner-bg.jpg')">
+                            <div class="top-banner__desc">
+                                <div class="top-banner__title">
+                                    Знижка <span>35%</span> на всі дитячі автокрісла
+                                </div>
+                                <div class="top-banner__date">
+                                    Акція діє з <b>12.07 по 14.08</b>
+                                </div>
+                                <a href="#" class="btn-green">Купити</a>
+                            </div>
+                            <div class="top-banner__media">
                                 <picture>
-                                    <source media="(min-width: 576px)"
-                                            srcset="../static/images/banner.jpg">
-                                    <img src="../static/images/banner-mob.jpg" alt="hero">
+                                    <!--                                    <source media="(min-width: 768)" srcset="../static/images/top-banner-505.jpg">-->
+                                    <img src="../static/images/top-banner-2.jpg" alt="top-banner">
                                 </picture>
-                            </a>
+                            </div>
                         </div>
                     </div>
                     <div class="slider-nav">

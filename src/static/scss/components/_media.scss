@@ -43,6 +43,13 @@
 }
 
 @media screen and (max-width: 1200px){
+  .top-filter__bottom {
+    .top-filter__top-list {
+      li{
+        width: 50%;
+      }
+    }
+  }
   .top-filter__title{
     width: 50%;
   }
@@ -264,9 +271,38 @@
   .page-content{
     padding-top: 0;
   }
+  .top-filter__top-list {
+    li{
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 768px){
+  .top-filter__top {
+    flex-direction: column;
+    &-title{
+      text-align: center;
+    }
+    &-list{
+      width: 100%;
+    }
+    &-add{
+      padding: 20px;
+      text-align: center;
+    }
+  }
+  .top-filter__bottom {
+    .top-filter__top-list {
+      li{
+        width: 100%;
+        justify-content: space-between;
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
   .header{
     .dropdown-menu{
       width: 230px;
