@@ -8,7 +8,7 @@
   }
   &-logo{
     display: flex;
-    max-width: 261px;
+    max-width: 271px;
     flex-wrap: wrap;
     a{
       width: 100%;
@@ -186,7 +186,7 @@
       color: $white;
       font-size: 14px;
       font-style: normal;
-      font-weight: 700;
+      font-weight: 400;
       line-height: 120%;
       display: inline-block;
       margin-right: 20px;
@@ -196,10 +196,17 @@
       border: 1px solid rgba(255, 255, 255, 0.40);
       border-radius: 50%;
       margin-right: 4px;
+      img{
+        width: 16px;
+        height: 16px;
+      }
       &:last-of-type{
         margin-right: 0;
       }
       &:hover{
+        img{
+          filter: brightness(0) invert(1);
+        }
         border-color: $primary;
         background: $primary;
       }
