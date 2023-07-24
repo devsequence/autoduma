@@ -9,8 +9,10 @@ var rimraf = require("rimraf");
 var useref = require('gulp-useref');
 var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
+const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const cleanCSS = require('gulp-clean-css');
+const postcss = require('gulp-postcss');
 var cssnano = require('cssnano');
 var path = require('path');
 var svgSprite = require('gulp-svg-sprite'),
@@ -30,9 +32,16 @@ gulp.task('build:production', function () {
         cssnano()
     ];
 
+    gulp.src('src/static/css/index.css')
+        .pipe(autoprefixer({
+            cascade: false
+        }))
+        .pipe(gulp.dest('dist/static/css/'))
+
+
     return gulp.src('./src/preview/*.html')
         .pipe(useref())
-        .pipe(gulpif('*.css', postcss(processors)))
+        // .pipe(gulpif('*.css', postcss(processors)))
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulp.dest('./dist/html'));
 });
@@ -91,12 +100,38 @@ gulp.task('dev:html', function () {
 });
 
 gulp.task('dev:css', function () {
+
     return gulp.src('./src/static/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
         // .pipe(rename('style.css'))
         .pipe(gulp.dest('./src/static/css'))
         .pipe(browserSync.stream());
 });
+gulp.task('dev:autoprefixerCss', () => {
+    return gulp.src('./src/static/css/index.css')
+        .pipe(sourcemaps.init())
+        .pipe(postcss([ autoprefixer({ overrideBrowserslist: ['last 2 versions'],
+            cascade: false}) ]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./dist/static/css/min'))
+});
+gulp.task('dev:minifyCss', () => {
+    return gulp.src('./dist/static/css/min/*.css')
+        .pipe(sourcemaps.init())
+        .pipe(cleanCSS())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./dist/static/css/compress'));
+
+});
+//
+// gulp.task('', function () {
+//
+//     return gulp.src('./src/static/css/index.css')
+//         .pipe(autoprefixer({
+//             cascade: false
+//         }))
+//         .pipe(gulp.dest('./src/static/css/min'))
+// });
 
 gulp.task('dev:reload', function(){
     browserSync.reload();
