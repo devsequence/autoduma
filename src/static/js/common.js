@@ -100,6 +100,24 @@ var Swipes = new Swiper('.action-slider .slider-init', {
     }
 });
 
+
+$('.list-from li').on('click', function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $thisValue = $this.data('value');
+    console.log($thisValue);
+    $this.parents('.form-delivery__item').attr('data-from', $thisValue);
+    localStorage.setItem("deliveryFrom",  $thisValue);
+
+});
+$('.list-to li').on('click', function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $thisValue = $this.data('value');
+    $this.parents('.form-delivery__item').attr('data-to', $thisValue);
+    localStorage.setItem("deliveryTo",  $thisValue);
+});
+
 $('.header-btn').on('click', function (e) {
     e.preventDefault();
     var $this = $(this);
