@@ -5760,4 +5760,7 @@ body.scroll {
     width: auto;
     margin-bottom: 20px;
   }
+  .popup-centered {
+    width: 100%;
+  }
 }
