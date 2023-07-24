@@ -123,6 +123,10 @@ body {
   overflow-x: hidden;
 }
 
+.page-wrapper {
+  overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
@@ -5691,9 +5695,17 @@ body.scroll {
   }
 }
 @media screen and (max-width: 480px) {
+  .top-banner__date {
+    width: 70%;
+  }
+  .top-banner__media img {
+    max-height: 200px;
+    max-width: 200px;
+  }
   .header-btn {
     margin-right: 10px;
-    min-width: 34px;
+    min-width: 32px;
+    width: 32px;
     height: 34px;
     padding: 5px;
   }

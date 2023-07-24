@@ -454,9 +454,21 @@
   }
 }
 @media screen and (max-width: 480px){
+  .top-banner{
+    &__date {
+      width: 70%;
+    }
+    &__media{
+      img{
+        max-height: 200px;
+        max-width: 200px;
+      }
+    }
+  }
   .header-btn{
     margin-right: 10px;
-    min-width: 34px;
+    min-width: 32px;
+    width: 32px;
     height: 34px;
     padding: 5px;
     &.active {
