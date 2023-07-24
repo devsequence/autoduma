@@ -83,153 +83,28 @@
         </span>
     </button>
 </div>
-<div class="popup popup-login" data-popup="login">
+<div class="popup popup-callMe" data-popup="callMe">
     <div class="popup-centered">
         <div class="popup-close">
             <svg class="icon">
                 <use xlink:href="#ic-close"></use>
             </svg>
         </div>
+        <div class="popup-subtitle">
+            Передзвоніть мені
+        </div>
+        <form>
+            <label class="label">
+                <input type="tel" id="call-me" class="input" name="callMe[phone]" placeholder="Телефон" required>
+            </label>
+            <button class="btn btn-green" type="submit">
+                Надіслати
+            </button>
+        </form>
+    </div>
+    <div class="popup-overlay"></div>
+</div>
 
-        <div class="popup-title">
-            Вхід
-        </div>
-        <form>
-            <label class="label">
-                <input type="tel" id="login" class="input" name="login[phone/email]" placeholder="Телефон або e-mail" required>
-            </label>
-            <label class="label">
-                <input type="password" id="login-password" class="input" name="login[password]" placeholder="Пароль" required>
-            </label>
-            <div class="modal-group">
-                <input type="checkbox" id="remember" class="input-checkbox">
-                <label for="remember" class="label-checkbox">
-                    Запам'ятати мене
-                </label>
-            </div>
-            <a href="#" class="forgot btn-popup" data-popup="forgot">
-                Забули пароль
-            </a>
-            <p class="popup-text">
-                Або авторизуйтесь через соціальні мережі
-            </p>
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="../static/images/facebook.png" alt="facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../static/images/google.png" alt="google">
-                    </a>
-                </li>
-            </ul>
-            <div class="action-btn">
-                <button class="btn btn-green" type="submit">
-                    Увійти
-                </button>
-                <button class="btn btn-popup" data-popup="regist" type="button">
-                    Реєстрація
-                </button>
-            </div>
-        </form>
-    </div>
-    <div class="popup-overlay"></div>
-</div>
-<div class="popup popup-regist" data-popup="regist">
-    <div class="popup-centered">
-        <div class="popup-close">
-            <svg class="icon">
-                <use xlink:href="#ic-close"></use>
-            </svg>
-        </div>
-        <div class="popup-title">
-            <span>
-                Реєстрація
-            </span>
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="../static/images/facebook.png" alt="facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../static/images/google.png" alt="google">
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <form>
-            <label class="label">
-                <input type="tel" class="input" name="regist[phone]" placeholder="Телефон" required>
-            </label>
-            <label class="label">
-                <input type="text" class="input" name="regist[name]" placeholder="Ім'я" required>
-            </label>
-            <label class="label">
-                <input type="password" class="input" name="regist[password]" placeholder="Пароль" required>
-            </label>
-            <label class="label">
-                <input type="password" class="input" name="regist[submitPassword]" placeholder="Підтвердження пароля" required>
-            </label>
-            <label class="label">
-                <input type="email" class="input" name="regist[email]" placeholder="E-mail" required>
-            </label>
-            <div class="modal-group">
-                <input type="checkbox" id="agry-popup" class="input-checkbox">
-                <label for="agry-popup" class="label-checkbox">
-                    Реєструючись, ви погоджуєтесь з
-                    <a href="#" class="green-line">
-                        угодою користувача
-                    </a>
-                </label>
-            </div>
-            <button class="btn btn-green" type="submit">
-                Увійти
-            </button>
-            <div class="login-btn">
-                <span>
-                    Вже є аккаунт?
-                </span>
-                <a href="#" class="green-line btn-popup" data-popup="login">
-                    Вхід
-                </a>
-            </div>
-        </form>
-    </div>
-    <div class="popup-overlay"></div>
-</div>
-<div class="popup popup-forgot" data-popup="forgot">
-    <div class="popup-centered">
-        <div class="popup-close">
-            <svg class="icon">
-                <use xlink:href="#ic-close"></use>
-            </svg>
-        </div>
-        <div class="popup-title">
-            Забыли пароль?
-        </div>
-        <form>
-            <label class="label">
-                <input type="email" id="forgot" class="input" name="forgot[email]" placeholder="E-mail" required>
-            </label>
-            <button class="btn btn-green" type="submit">
-                Відновити
-            </button>
-            <ul>
-                <li>
-                    <button class="btn btn-green btn-popup" data-popup="login" type="button">Вхід</button>
-                </li>
-                <li>
-                    <button class="btn link-line btn-popup" data-popup="regist" type="button">Реєстрація</button>
-                </li>
-            </ul>
-        </form>
-    </div>
-    <div class="popup-overlay"></div>
-</div>
 <div class="popup cookies-popup">
     <div class="popup-centered">
         <div class="cookies-wrap container">

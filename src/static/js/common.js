@@ -212,3 +212,28 @@ $('.top-filter__item-title').on('click', function () {
         $('div[data-tab = '+$thisData+']').addClass('active');
     }
 });
+function popupOpen() {
+    var $popupButton = $('.btn-popup');
+    $popupButton.on('click', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        var popupButtonData = $this.data('popup');
+        $('.popup').removeClass('active');
+        $('div[data-popup = '+popupButtonData+']').addClass('active');
+        $('body').addClass('scroll');
+        $('.popup-overlay').addClass('active');
+    });
+}
+popupOpen();
+$('.popup-close').on('click', function (e) {
+    var $this = $(this);
+    $this.parent().parent().removeClass('active');
+    $('.popup-overlay').removeClass('active');
+    $('body').removeClass('scroll');
+});
+$('.popup-overlay').on('click', function (e) {
+    var $this = $(this);
+    $this.removeClass('active');
+    $('.popup').removeClass('active');
+    $('body').removeClass('scroll');
+});
