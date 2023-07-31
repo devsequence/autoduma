@@ -329,22 +329,24 @@
   }
   &-logo{
     img{
-      width: 100%;max-width: 300px;
+      width: 100%;
+      max-width: 300px;
     }
   }
   &-search{
     width: 100%;
     position: relative;
-    max-width: 674px;
+    margin: 0 0 0 auto;
+    max-width: 620px;
     form{
-      max-width: 674px;
+      max-width: 640px;
       display: flex;
       justify-content: space-between;
       width: 100%;
     }
     .search-label{
       width: 100%;
-      max-width: 623px;
+      max-width: 570px;
       position: relative;
       &:before{
         position: absolute;

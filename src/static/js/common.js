@@ -46,6 +46,22 @@ $(document).mouseup(function (e){
         $('.header-info__account').removeClass('active');
         $('.dropdown-menu').removeClass('active');
     }
+    var form = $('.review-form');
+    if (!form.is(e.target)
+        && form.has(e.target).length === 0) {
+        $('.product-testimonials__inner').removeClass('open-form');
+        $('.btn-review').removeClass('hidden');
+        form.removeClass('active').addClass('hidden');
+
+    }
+    var sortList = $('.btn-sort');
+    if (!sortList.is(e.target)
+        && sortList.has(e.target).length === 0) {
+        $('.btn-sort__title, .btn-sort__list').removeClass('active');
+
+
+
+    }
 });
 var NewSwipes = new Swiper('.new-slider .slider-init', {
     loop: true,
@@ -236,4 +252,100 @@ $('.popup-overlay').on('click', function (e) {
     $this.removeClass('active');
     $('.popup').removeClass('active');
     $('body').removeClass('scroll');
+});
+
+// FancyBox
+
+$().fancybox({
+    backFocus : false,
+    selector : '.gallery-thumbs .product-slider-item:not(.swiper-slide-duplicate) ',
+
+});
+// Product Slider
+var galleryTop = new Swiper('.gallery-top', {
+    slidesPerView: 'auto',
+    navigation: false,
+    loop: true,
+    pagination: {
+        el: '.gallery-top  .swiper-pagination',
+        clickable: true,
+    },
+});
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 8.57,
+    slidesPerView: 'auto',
+    slideToClickedSlide: true,
+    loop: true,
+    navigation: false,
+});
+galleryTop.controller.control = galleryThumbs;
+galleryThumbs.controller.control = galleryTop;
+$('.top-filter__top-list li').on('click', function (e) {
+    var $this = $(this);
+    $this.parents('.top-filter__top').next().toggleClass('hidden')
+});
+$('.top-filter__top-add').on('click', function (e) {
+    var $this = $(this);
+    $this.parents('.top-filter__result').toggleClass('hidden').prev().toggleClass('hidden');
+});
+
+
+function tabsInner(){
+    var tabItemNav = $('.tabs-nav a');
+    var tabItem = $('.tabs-item' );
+    tabItemNav.on('click', function(e){
+        e.preventDefault();
+        var $this = $(this),
+            tabItemId = $this.attr('href');
+        tabItemNav.removeClass('active');
+        $this.addClass('active');
+        tabItem.removeClass('active');
+        $(tabItemId).addClass('active');
+        if($('.tabs-item:first-child').hasClass('active')){
+            $('.product-small').removeClass('active');
+        }else {
+            $('.product-small').addClass('active');
+        }
+    });
+}
+tabsInner();
+function quantityProducts() {
+    let $quantityArrowMinus = $(".btn-minus");
+    let $quantityArrowPlus = $(".btn-plus");
+    $quantityArrowMinus.click(quantityMinus);
+    $quantityArrowPlus.click(quantityPlus);
+    function quantityMinus() {
+        let $quantityNum = $(this).siblings('.basket-quantity');
+        if ($quantityNum.val() > 1) {
+            $quantityNum.val(+$quantityNum.val() - 1);
+        }
+    }
+    function quantityPlus() {
+        let $quantityNum = $(this).siblings('.basket-quantity');
+        $quantityNum.val(+$quantityNum.val() + 1);
+    }
+};
+quantityProducts();
+$('.product-wrapper .basket-quantity').on('change', function (e) {
+    const $ths = $(this);
+    $('.product-wrapper .basket-quantity').val($ths.val())
+});
+$('.product-wrapper .btn-counter').on('click', function (e) {
+    const $ths = $(this);
+    $('.product-wrapper .basket-quantity').val($ths.siblings('.basket-quantity').val())
+});
+$('.btn-review').on('click', function (e) {
+    const $ths = $(this);
+    $('.review-form').removeClass('hidden').addClass('active');
+    $('.product-testimonials__inner').addClass('open-form');
+    $ths.addClass('hidden');
+});
+$('.btn-sort__title').on('click', function (e) {
+    const $ths = $(this);
+    $ths.toggleClass('active').next().toggleClass('active');
+});
+$('.btn-sort__list a').on('click', function (e) {
+    e.preventDefault();
+    const $ths = $(this);
+    $ths.parents('.btn-sort__list').removeClass('active').prev().removeClass('active').text($ths.text());
 });

@@ -60,10 +60,7 @@ gulp.task('build:move', function() {
         .pipe(gulp.dest('./dist/static/images'));
 });
 
-gulp.task('build', function () {
-    // runSequence('build:clean', 'build:production', 'build:move');
-    runSequence('build:production', 'build:move');
-});
+
 gulp.task('dev:svg', function () {
     return gulp.src('./src/static/images/svg/*.svg')
         .pipe(svgmin({
@@ -100,28 +97,39 @@ gulp.task('dev:html', function () {
 });
 
 gulp.task('dev:css', function () {
-
     return gulp.src('./src/static/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
-        // .pipe(rename('style.css'))
-        .pipe(gulp.dest('./src/static/css'))
-        .pipe(browserSync.stream());
-});
-gulp.task('dev:autoprefixerCss', () => {
-    return gulp.src('./src/static/css/index.css')
+        .pipe(rename('style.css'))
         .pipe(sourcemaps.init())
         .pipe(postcss([ autoprefixer({ overrideBrowserslist: ['last 2 versions'],
             cascade: false}) ]))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./dist/static/css/min'))
-});
-gulp.task('dev:minifyCss', () => {
-    return gulp.src('./dist/static/css/min/*.css')
         .pipe(sourcemaps.init())
         .pipe(cleanCSS())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./dist/static/css/compress'));
+        .pipe(gulp.dest('./src/static/css'))
 
+        .pipe(browserSync.stream())
+});
+// gulp.task('dev:autoprefixerCss', () => {
+//     return gulp.src('./src/static/css/index.css')
+//         .pipe(sourcemaps.init())
+//         .pipe(postcss([ autoprefixer({ overrideBrowserslist: ['last 2 versions'],
+//             cascade: false}) ]))
+//         .pipe(sourcemaps.write('.'))
+//         .pipe(gulp.dest('./dist/static/css/min'))
+// });
+// gulp.task('dev:minifyCss', () => {
+//     return gulp.src('./dist/static/css/min/*.css')
+//         .pipe(sourcemaps.init())
+//         .pipe(cleanCSS())
+//         .pipe(sourcemaps.write())
+//         .pipe(gulp.dest('./dist/static/css/compress'));
+//
+// });
+gulp.task('build', function () {
+    // runSequence('build:clean', 'build:production', 'build:move');
+    runSequence('build:production', 'dev:autoprefixerCss', 'dev:minifyCss');
 });
 //
 // gulp.task('', function () {
