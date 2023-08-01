@@ -720,12 +720,15 @@
       ul{
         margin-bottom: 20px;
       }
+      &:first-of-type, &:last-of-type{
+        .product-use__title{
+          border-radius: 10px;
+        }
+      }
     }
     &__title{
       border-radius: 10px;
-      &:first-of-type, &:last-of-type{
-        border-radius: 10px;
-      }
+
     }
   }
 }
